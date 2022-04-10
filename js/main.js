@@ -94,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var _document, _document2, _document3, _document4;
+var _document, _document2, _document3;
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   windowEl: window,
@@ -103,8 +103,8 @@ var _document, _document2, _document3, _document4;
   bodyEl: document.body,
   portfolioSlider: (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector('.portfolio__slider'),
   reviewsSlider: (_document2 = document) === null || _document2 === void 0 ? void 0 : _document2.querySelector('.reviews__slider'),
-  selects: (_document3 = document) === null || _document3 === void 0 ? void 0 : _document3.querySelector('.form__area--choose'),
-  accordion: (_document4 = document) === null || _document4 === void 0 ? void 0 : _document4.querySelector('.faq__list')
+  selects: (_document3 = document) === null || _document3 === void 0 ? void 0 : _document3.querySelector('.form__area--choose') // accordion: document?.querySelector('.faq__item'),
+
 });
 
 /***/ }),
@@ -135,17 +135,39 @@ __webpack_require__.r(__webpack_exports__);
   \****************************************/
 /***/ (() => {
 
-var _document;
+document.addEventListener('DOMContentLoaded', function () {
+  var _document;
 
-var questions = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelectorAll(".faq__item");
-questions.forEach(function (el) {
-  el.addEventListener("click", function () {
-    questions.forEach(function (item) {
-      if (item !== el) {
-        item.classList.remove("faq__item--active");
+  var accordions = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelectorAll('.faq__item'); // for (item of accordions) {
+  //   item.addEventListener('click', function () {
+  //     if (this.classList.contains('is-open')) {
+  //       this.classList.remove('is-open');
+  //     } else {
+  //       for (el of accordions) {
+  //         el.classList.remove('is-open');
+  //       }
+  //       this.classList.add('is-open');
+  //     }
+  //   })
+  // };
+
+  accordions.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      var self = e.currentTarget;
+      var control = self.querySelector('.faq__btn');
+      var content = self.querySelector('.faq__text');
+      self.classList.toggle('is-open'); //если открыт аккордеон
+
+      if (self.classList.contains('is-open')) {
+        control.setAttribute('aria-expanded', true);
+        content.setAttribute('aria-expanded', false);
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        control.setAttribute('aria-expanded', false);
+        content.setAttribute('aria-expanded', true);
+        content.style.maxHeight = null;
       }
     });
-    el.classList.toggle("faq__item--active");
   });
 });
 
@@ -238,6 +260,9 @@ swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MOD
 new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](_vars__WEBPACK_IMPORTED_MODULE_0__["default"].reviewsSlider, {
   slidesPerView: "auto",
   spaceBetween: 40,
+  autoplay: {
+    delay: 1500
+  },
   navigation: {
     nextEl: '.slider-btn__next',
     prevEl: '.slider-btn__prev'
@@ -268,21 +293,39 @@ new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](_vars__WEBPACK_IMPORTED_MODUL
   \*************************************/
 /***/ (() => {
 
-var _document, _document2;
+document.addEventListener('DOMContentLoaded', function () {
+  var _document, _document2;
 
-var header = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector('.header');
-var headerHeight = (_document2 = document) === null || _document2 === void 0 ? void 0 : _document2.querySelector('.header').offsetHeight;
-document.querySelector(':root').style.setProperty('--header-height', "".concat(headerHeight, "px"));
-window.addEventListener('scroll', function () {
-  var scrollDistance = window.scrollY;
+  var scrollItems = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelectorAll('.scroll-item');
+  var line = (_document2 = document) === null || _document2 === void 0 ? void 0 : _document2.querySelector('.progress-line__item');
 
-  if (scrollDistance >= headerHeight) {
-    header.classList.add('header--active');
-  } else {
-    header.classList.remove('header--active');
-  }
+  var scrollAnimation = function scrollAnimation() {
+    var windowCenter = window.innerHeight / 2 + window.scrollY;
+    scrollItems.forEach(function (el) {
+      var scrollOffset = el.offsetTop + el.offsetHeight / 2;
 
-  ;
+      if (windowCenter >= scrollOffset) {
+        el.classList.add('animation-class');
+      } else {
+        el.classList.remove('animation-class');
+      }
+    });
+  };
+
+  var progressAnimation = function progressAnimation() {
+    var scrollTop = window.scrollY;
+    var windowHeight = window.innerHeight;
+    var siteHeight = document.documentElement.scrollHeight;
+    var percentageProgress = Math.floor(scrollTop / (siteHeight - windowHeight) * 100);
+    line.style.width = "".concat(percentageProgress, "%");
+  };
+
+  scrollAnimation();
+  progressAnimation();
+  window.addEventListener('scroll', function () {
+    scrollAnimation();
+    progressAnimation();
+  });
 });
 
 /***/ }),
@@ -320,7 +363,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 new (choices_js__WEBPACK_IMPORTED_MODULE_1___default())(_vars__WEBPACK_IMPORTED_MODULE_0__["default"].selects, {
-  noResultsText: 'Нічого не знайдено'
+  noResultsText: 'Нічого не знайдено',
+  itemSelectText: 'Натисніть для вибору'
 });
 
 /***/ }),
@@ -434,20 +478,35 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (function () {
-  var _document, _document2, _document3, _document4;
+  var _document, _document2, _document3, _document4, _document5, _document6;
 
   var burger = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector('[data-burger]');
   var menu = (_document2 = document) === null || _document2 === void 0 ? void 0 : _document2.querySelector('[data-menu]');
   var menuItems = (_document3 = document) === null || _document3 === void 0 ? void 0 : _document3.querySelectorAll('[data-menu-item]');
   var overlay = (_document4 = document) === null || _document4 === void 0 ? void 0 : _document4.querySelector('.site-container');
+  var headerHeight = (_document5 = document) === null || _document5 === void 0 ? void 0 : _document5.querySelector('.header').offsetHeight;
+  var header = (_document6 = document) === null || _document6 === void 0 ? void 0 : _document6.querySelector('.header');
+  window.addEventListener('scroll', function () {
+    var scrollDistance = window.scrollY;
+
+    if (scrollDistance >= headerHeight) {
+      header === null || header === void 0 ? void 0 : header.classList.add('header--active');
+    } else {
+      header === null || header === void 0 ? void 0 : header.classList.remove('header--active');
+    }
+
+    ;
+  });
   burger === null || burger === void 0 ? void 0 : burger.addEventListener('click', function (e) {
     burger === null || burger === void 0 ? void 0 : burger.classList.toggle('burger--active');
     menu === null || menu === void 0 ? void 0 : menu.classList.toggle('nav__list--active');
-    overlay.classList.toggle('is-active');
+    overlay === null || overlay === void 0 ? void 0 : overlay.classList.toggle('is-active');
+    header === null || header === void 0 ? void 0 : header.classList.remove('header--active');
 
     if (menu !== null && menu !== void 0 && menu.classList.contains('nav__list--active')) {
       burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-expanded', 'true');
       burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-label', 'Відкрити меню');
+      header === null || header === void 0 ? void 0 : header.classList.remove('header--active');
       (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
     } else {
       burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-expanded', 'false');
@@ -459,7 +518,7 @@ __webpack_require__.r(__webpack_exports__);
     el.addEventListener('click', function () {
       burger.classList.remove('burger--active');
       menu.classList.remove('nav__list--active');
-      overlay.classList.remove('is-active');
+      overlay === null || overlay === void 0 ? void 0 : overlay.classList.remove('is-active');
       (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
     });
   });
@@ -483,7 +542,7 @@ __webpack_require__.r(__webpack_exports__);
 var disableScroll = function disableScroll() {
   var _document;
 
-  var fixBlocks = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelectorAll('.fix-block');
+  var fixBlocks = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelectorAll('.fixed-block');
   var pagePosition = window.scrollY;
   var paddingOffset = "".concat(window.innerWidth - _vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.offsetWidth, "px");
   _vars__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.style.scrollBehavior = 'none';
@@ -514,7 +573,7 @@ __webpack_require__.r(__webpack_exports__);
 var enableScroll = function enableScroll() {
   var _document;
 
-  var fixBlocks = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelectorAll('.fix-block');
+  var fixBlocks = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelectorAll('.fixed-block');
   var body = document.body;
   var pagePosition = parseInt(_vars__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.dataset.position, 10);
   fixBlocks.forEach(function (el) {
@@ -22829,7 +22888,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_vendor */ "./src/js/_vendor.js");
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_functions */ "./src/js/_functions.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_components */ "./src/js/_components.js");
- // import vars from './_vars';
 
 
 

@@ -18,15 +18,16 @@
 </head>
 
 
-<body class="page__body">
+
+<body class="page__body" id="page__body">
 
       <div class="site-container">
 
-        <header class="header fix-block" data-scroll-header>
+        <header class="header fixed-block" data-scroll-header>
 
   <div class="container">
 
-    <nav class="nav">
+    <nav class="nav" title="Головне меню">
 
       <a class="logo" href="#">
         <img class="logo__img" src="img/logo.svg" width="140" height="60" alt="Логотип сайту">
@@ -35,28 +36,28 @@
 
       <ul class="nav__list" data-menu>
 
-        <li class="nav__item" data-menu-item>
-          <a class="nav__link" href="#about">Про нас</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#about" data-menu-item data-scroll>Про нас</a>
         </li>
 
-        <li class="nav__item" data-menu-item>
-          <a class="nav__link" href="#services">Послуги</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#services" data-menu-item data-scroll>Послуги</a>
         </li>
 
-        <li class="nav__item" data-menu-item>
-          <a class="nav__link" href="#portfolio">Новини</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#portfolio" data-menu-item data-scroll>Новини</a>
         </li>
 
-        <li class="nav__item" data-menu-item>
-          <a class="nav__link" href="#reviews">Відгуки</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#reviews" data-menu-item data-scroll>Відгуки</a>
         </li>
 
-        <li class="nav__item" data-menu-item>
-          <a class="nav__link" href="#faq">FAQ</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#faq" data-menu-item data-scroll>FAQ</a>
         </li>
 
-        <li class="nav__item" data-menu-item>
-          <a class="nav__link" href="#contacts">Контакти</a>
+        <li class="nav__item">
+          <a class="nav__link" href="#contacts" data-menu-item data-scroll>Контакти</a>
         </li>
 
         <li class="nav__item nav__item--btn">
@@ -71,6 +72,10 @@
 
     </nav>
 
+  </div>
+
+  <div class="progress-line">
+    <div class="progress-line__item"></div>
   </div>
 
 </header>
@@ -176,7 +181,7 @@
               <source srcset="img/hero/best-lawyers.avif" type="image/avif">
               <source srcset="img/hero/best-lawyers.webp" type="image/webp">
               <img loading="lazy" src="img/hero/best-lawyers.png" class="hero-awards__img" width="155" height="110"
-                alt="зображення нагороди юрист року">
+                alt="Зображення нагороди юрист року">
             </picture>
 
           </li>
@@ -187,7 +192,7 @@
               <source srcset="img/hero/awards-best.avif" type="image/avif">
               <source srcset="img/hero/awards-best.webp" type="image/webp">
               <img loading="lazy" src="img/hero/awards-best.png" class="hero-awards__img" width="100" height="110"
-                alt="зображення нагороди юрист року">
+                alt="Зображення нагороди юрист року">
             </picture>
 
           </li>
@@ -197,7 +202,7 @@
               <source srcset="img/hero/awards-2018.avif" type="image/avif">
               <source srcset="img/hero/awards-2018.webp" type="image/webp">
               <img loading="lazy" src="img/hero/awards-2018.png" class="hero-awards__img" width="110" height="110"
-                alt="зображення нагороди юрист року">
+                alt="Зображення нагороди юрист року">
             </picture>
           </li>
 
@@ -216,40 +221,49 @@
 
   <div class="container">
 
-    <span class="slogan" data-aos="fade-right" data-aos-delay="250">Про нас</span>
+    <span class="slogan" data-aos="fade-up" data-aos-delay="250">Про нас</span>
 
-    <h2 class="title" data-aos="fade-right">Cфера діяльності</h2>
+    <h2 class="title" data-aos="fade-up" data-aos-delay="300">Cфера діяльності</h2>
 
   </div>
 
   <div class="about__inner">
 
     <div class="about__content">
-      <p data-aos="flip-right" data-aos-delay="150">Якщо Ви володієте бізнесом чи керуєте громадською організацією - ми
+
+      <p data-aos="fade-up" data-aos-delay="150">Якщо Ви володієте бізнесом чи керуєте громадською організацією - ми
         допоможемо Вам у реєстрації, внесенні змін до Реєстру, ліквідації.
       </p>
-      <p data-aos="flip-right" data-aos-delay="250">
+
+      <p data-aos="fade-up" data-aos-delay="250">
         Консультуємо з питань договірних відносин, складаємо індивідуальні та типові договори, проаналізуємо наявну
         ситуацію, допоможемо подолати кризу у стосунках з партнерами та дійти згоди.
       </p>
-      <p data-aos="flip-right" data-aos-delay="350">
+
+      <p data-aos="fade-up" data-aos-delay="350">
         Щодо Вас винесено виконавчий напис та відкрито виконавче провадження? Накладено арешт на рахунки та майно? Ми
         допоможемо Вам розібратися в ситуації, проаналізуємо законність дій нотаріуса та виконавця, оскаржемо їх дії в
         судовому порядку, та на період розгляду справи - зупинемо стягнення коштів.
       </p>
-      <p data-aos="flip-right" data-aos-delay="450">
-        Якщо Ваш партнер не здійснює належного фінансового утримання Вашої спільної дитини - ми допоможемо Вам стягнути аліменти в судовому порядку, а також, за потреби здійснити юридичний супровід розлучення та встановлення графіку спільного виховання дитини.
+
+      <p data-aos="fade-up" data-aos-delay="450">
+        Якщо Ваш партнер не здійснює належного фінансового утримання Вашої спільної дитини - ми допоможемо Вам стягнути
+        аліменти в судовому порядку, а також, за потреби здійснити юридичний супровід розлучення та встановлення графіку
+        спільного виховання дитини.
       </p>
-      <p data-aos="flip-right" data-aos-delay="550">
-        Якщо у Ваших документах виявились помилки та розбіжності за Вашими даними - ми в судовому порядку встановимо цей юридичний факт.</p>
+      
+      <p data-aos="fade-up" data-aos-delay="550">
+        Якщо у Ваших документах виявились помилки та розбіжності за Вашими даними - ми в судовому порядку встановимо цей
+        юридичний факт.</p>
     </div>
 
-    <div class="about__box" data-aos="zoom-in-left" data-aos-easing="linear" data-aos-delay="550">
+    <div class="about__box" data-aos="fade-up" data-aos-duration="500">
 
       <picture>
         <source srcset="img/about-bg.avif" type="image/avif">
         <source srcset="img/about-bg.webp" type="image/webp">
-        <img loading="lazy" class="about__img" src="img/about-bg.jpg" width="940" height="580" alt="Зображення колон в залі суду">
+        <img loading="lazy" class="about__img" src="img/about-bg.jpg" width="940" height="580"
+          alt="Зображення колон в залі суду">
       </picture>
 
     </div>
@@ -263,70 +277,94 @@
 
   <div class="services__inner">
 
-    <div class="services__box" data-aos="zoom-in-left" data-aos-easing="linear" data-aos-delay="550">
+    <div class="services__box" data-aos="fade-up" data-aos-duration="500">
 
       <picture>
         <source srcset="img/services.avif" type="image/avif">
         <source srcset="img/services.webp" type="image/webp">
-        <img loading="lazy" class="services__img" src="img/services.jpg" width="695" height="860" alt="зображення статуї Феміди">
+        <img loading="lazy" class="services__img" src="img/services.jpg" width="695" height="860"
+          alt="зображення статуї Феміди">
       </picture>
 
     </div>
 
     <div class="services__content">
 
-      <span class="slogan" data-aos="fade-right">Послуги</span>
+      <span class="slogan" data-aos="fade-up" data-aos-delay="250">Послуги</span>
 
-      <h2 class="title" data-aos="fade-right">Юридичні практики</h2>
+      <h2 class="title" data-aos="fade-up" data-aos-delay="300">Юридичні практики</h2>
 
-      <ul class="services__list">
+      <ul class="services__list" data-aos="fade-up" data-aos-delay="350">
 
-        <li class="services__item" data-aos="flip-right" data-aos-delay="50">
+        <li class="services__item">
 
-          <div class="services__icon services__icon--people">
-            <h3>Цивільне право</h3>
-          </div>
+  <div class="services__icon services__icon--people">
+    <h3>
+      Цивільне право
+    </h3>
+  </div>
 
-          <p>Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor.</p>
+  <p>
+    Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor. Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor.
+  </p>
 
-          <p>Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor.</p>
+   <!-- <p>
+     @subtext
+   </p> -->
 
-        </li>
+</li>
+<li class="services__item">
 
-        <li class="services__item" data-aos="flip-right" data-aos-delay="150">
+  <div class="services__icon services__icon--bank">
+    <h3>
+      Господарське право
+    </h3>
+  </div>
 
-          <div class="services__icon services__icon--bank">
-            <h3>Господарське право</h3>
-          </div>
+  <p>
+    Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor. Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor.
+  </p>
 
-          <p>Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor.</p>
+   <!-- <p>
+     @subtext
+   </p> -->
 
-          <p>Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor.</p>
+</li>
+<li class="services__item">
 
-        </li>
+  <div class="services__icon services__icon--justice">
+    <h3>
+      Оскарження приписів і написів
+    </h3>
+  </div>
 
-        <li class="services__item" data-aos="flip-right" data-aos-delay="250">
+  <p>
+    Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor. Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor.
+  </p>
 
-          <div class="services__icon services__icon--justice">
-            <h3>Оскарження приписів і написів</h3>
-          </div>
+   <!-- <p>
+     @subtext
+   </p> -->
 
-          <p>Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor.</p>
+</li>
+<li class="services__item">
 
-          <p>Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor.</p>
+  <div class="services__icon services__icon--goal">
+    <h3>
+      Корпоративні та інші права
+    </h3>
+  </div>
 
-        </li>
-        <li class="services__item" data-aos="flip-right" data-aos-delay="350">
+  <p>
+    Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor. Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor.
+  </p>
 
-          <div class="services__icon services__icon--goal">
-            <h3>Корпоративні та інші права</h3>
-          </div>
+   <!-- <p>
+     @subtext
+   </p> -->
 
-          <p>Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor.</p>
+</li>
 
-          <p>Lorem ipsum dolor sit amet, con sectetu adipiscing elit, sed do eius mod tempor.</p>
-
-        </li>
 
       </ul>
 
@@ -341,9 +379,9 @@
 
   <div class="container">
 
-    <span class="slogan" data-aos="fade-left" data-aos-delay="250">Послуги</span>
+    <span class="slogan" data-aos="fade-up" data-aos-delay="250">Послуги</span>
 
-    <h2 class="title" data-aos="fade-left">Безкоштовна юридична консультація</h2>
+    <h2 class="title" data-aos="fade-up" data-aos-delay="300">Безкоштовна юридична консультація</h2>
 
   </div>
 
@@ -356,13 +394,8 @@
   <label class="form__label">
     Послуга
 
-    <select class="form__area form__area--choose form-select" name="Послуга">
-
-      <span class="visually-hidden">
-        Вибір послуг
-      </span>
-
-      <option value="">Ввведіть послугу</option>
+    <select class="form__area form__area--choose" name="Послуга">
+      
       <option value="Реєстрація ФОП, ТОВ">Реєстрація ФОП, ТОВ</option>
       <option value="Спірне батьківство">Спірне батьківство</option>
       <option value="Кримінальне судочинство">Кримінальне судочинство</option>
@@ -378,10 +411,6 @@
 
     Ім’я
 
-    <span class="visually-hidden">
-      Ім’я
-    </span>
-
     <input class="form__area input-name" data-validate-field="name" type="text" placeholder="Олена Гончар">
 
   </label>
@@ -390,19 +419,11 @@
 
     Телефон
 
-    <span class="visually-hidden">
-      Телефон
-    </span>
-
     <input class="form__area input-tel" type="tel" data-validate-field="tel" placeholder="(+380) 12 345 67 89">
   </label>
 
   <label class="form__label">
     Електронна пошта
-
-    <span class="visually-hidden">
-      Електронна пошта
-    </span>
 
     <input class="form__area input-mail" name="email" data-validate-field="email" type="email"
       placeholder="olena@example.ua">
@@ -411,10 +432,6 @@
 
   <label class="form__label">
     Повідомлення
-
-    <span class="visually-hidden">
-      Повідомлення
-    </span>
 
     <textarea class="form__area form__area--text" id="message" placeholder="Добрий день!"></textarea>
   </label>
@@ -435,7 +452,7 @@
 
     </div>
 
-    <div class="consultation__box" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-delay="550">
+    <div class="consultation__box" data-aos="fade-up" data-aos-duration="500">
 
       <img src="img/consultation.jpg" class="consultation__img" width="1100" height="560" alt="зображення юридичної консультації">
 
@@ -462,45 +479,60 @@
 
     <h2 class="visually-hidden">Наші переваги</h2>
 
-    <ul class="advantages__list">
+    <ul class="advantages__list" data-aos="fade-up" data-aos-delay="350">
 
-      <li class="advantages__item" data-aos="flip-right" data-aos-delay="150">
+      <li class="advantages__item">
 
-        <div class="advantages__icon advantages__icon--lock">
+  <div class="advantages__icon advantages__icon--lock">
+    <h3>
+      Конфіденційність і&nbsp;надійність
+    </h3>
+  </div>
 
-          <h3>Конфіденційність і надійність</h3>
+  <p>
+    На початку співпраці Ми укладаємо договір про нерозголошення. Ваша приватна інформація не вийде за межі нашого офісу.
+  </p>
 
-        </div>
+   <!-- <p>
+     @subtext
+   </p> -->
 
-        <p>На початку співпраці Ми укладаємо договір про нерозголошення.</p>
-        <p>Ваша приватна інформація не вийде за межі нашого офісу.</p>
+</li>
+<li class="advantages__item">
 
-      </li>
+  <div class="advantages__icon advantages__icon--people">
+    <h3>
+      Персональний підхід і підтримка
+    </h3>
+  </div>
 
-      <li class="advantages__item" data-aos="flip-right" data-aos-delay="250">
+  <p>
+    Індивідуальна робота з кожним клієнтом дозволяє вирішувати найскладніші проблеми.
+  </p>
 
-        <div class="advantages__icon advantages__icon--people">
+   <!-- <p>
+     @subtext
+   </p> -->
 
-          <h3>Персональний підхід і підтримка</h3>
+</li>
+<li class="advantages__item">
 
-        </div>
+  <div class="advantages__icon advantages__icon--court">
+    <h3>
+      Великий практичний досвід
+    </h3>
+  </div>
 
-        <p>Індивідуальна робота з кожним клієнтом дозволяє вирішувати найскладніші проблеми.</p>
+  <p>
+    Всі наші спеціалісти практикують право більше 10 років.
+  </p>
 
-      </li>
+   <!-- <p>
+     @subtext
+   </p> -->
 
-       <li class="advantages__item" data-aos="flip-right" data-aos-delay="350">
+</li>
 
-         <div class="advantages__icon advantages__icon--court">
-
-           <h3>Великий   
-             практичний досвід</h3>
-
-         </div>
-
-         <p>Всі наші спеціалісти практикують право більше 10 років.</p>
-
-       </li>
 
     </ul>
 
@@ -513,17 +545,17 @@
 
   <div class="container">
 
-    <span class="slogan" data-aos="fade-left" data-aos-delay="250">Новини</span>
+    <span class="slogan" data-aos="fade-up" data-aos-delay="250">Новини</span>
 
-    <h2 class="title" data-aos="fade-left">Успішні справи</h2>
+    <h2 class="title" data-aos="fade-up" data-aos-delay="300">Успішні справи</h2>
 
-    <div class="portfolio__slider" data-aos="fade-up">
+    <div class="portfolio__slider swiper" data-aos="fade-up" data-aos-delay="350">
 
       <div class="slider-btns">
 
   <button class="slider-btn__next slider-btn btn-reset" type="button">
 
-    <svg class="icon">
+    <svg class="slider-icon">
       <use xlink:href="img/sprite.svg#arrow-right"></use>
     </svg>
 
@@ -535,7 +567,7 @@
 
   <button class="slider-btn__prev slider-btn btn-reset" type="button">
 
-    <svg class="icon icon--revers">
+    <svg class="slider-icon slider-icon--revers">
       <use xlink:href="img/sprite.svg#arrow-right"></use>
     </svg>
 
@@ -548,142 +580,184 @@
 </div>
 
 
+
       <ul class="portfolio__list swiper-wrapper">
 
         <li class="portfolio__item swiper-slide">
 
-          <article class="article">
+  <article class="article">
 
-            <picture>
-              <source srcset="img/portfolio/disputs.avif" type="image/avif">
-              <source srcset="img/portfolio/disputs.webp" type="image/webp">
-              <img loading="lazy" src="img/portfolio/disputs.jpg" class="article__img" width="455" height="600"
-                alt="зображення робочої атмосфери">
-            </picture>
+    <picture>
+      <source srcset="img/portfolio/disputs.avif" type="image/avif">
+      <source srcset="img/portfolio/disputs.webp" type="image/webp">
+      <img loading="lazy" src="img/portfolio/disputs" class="article__img" width="455" height="600" alt="portfolio/disputsDesc">
+    </picture>
 
-            <div class="article__descr">
+    <div class="article__descr">
 
-              <a href="#"></a>
+      <span>Кредитні спори</span>
 
-              <span>Кредитные споры</span>
+      <h3>
+        Запобігли реалізації майна юридичної особи з торгів
+      </h3>
 
-              <h3>Предотвратили реализацию имущества юридического лица с торгов</h3>
+      <p>
+        10 грудня 2021
+      </p>
+    </div>
 
-              <p>10 декабря 2021</p>
+  </article>
+</li>
+<li class="portfolio__item swiper-slide">
 
-            </div>
+  <article class="article">
 
-          </article>
+    <picture>
+      <source srcset="img/portfolio/interier.avif" type="image/avif">
+      <source srcset="img/portfolio/interier.webp" type="image/webp">
+      <img loading="lazy" src="img/portfolio/interier" class="article__img" width="455" height="600" alt="portfolio/interierDesc">
+    </picture>
 
-        </li>
+    <div class="article__descr">
 
-        <li class="portfolio__item swiper-slide">
+      <span>Кредитні спори</span>
 
-          <article class="article">
+      <h3>
+        Запобігли реалізації майна юридичної особи з торгів
+      </h3>
 
-            <picture>
-              <source srcset="img/portfolio/interier.avif" type="image/avif">
-              <source srcset="img/portfolio/interier.webp" type="image/webp">
-              <img loading="lazy" src="img/portfolio/interier.jpg" class="article__img" width="455" height="600"
-                alt="зображення інтерєру будівлі">
-            </picture>
+      <p>
+        10 грудня 2021
+      </p>
+    </div>
 
-            <div class="article__descr">
+  </article>
+</li>
+<li class="portfolio__item swiper-slide">
 
-              <a href="#"></a>
+  <article class="article">
 
-              <span>Кредитные споры</span>
+    <picture>
+      <source srcset="img/portfolio/people.avif" type="image/avif">
+      <source srcset="img/portfolio/people.webp" type="image/webp">
+      <img loading="lazy" src="img/portfolio/people" class="article__img" width="455" height="600" alt="portfolio/peopleDesc">
+    </picture>
 
-              <h3>Предотвратили реализацию имущества юридического лица с торгов</h3>
+    <div class="article__descr">
 
-              <p>10 декабря 2021</p>
+      <span>Кредитні спори</span>
 
-            </div>
+      <h3>
+        Запобігли реалізації майна юридичної особи з торгів
+      </h3>
 
-          </article>
+      <p>
+        10 грудня 2021
+      </p>
+    </div>
 
-        </li>
+  </article>
+</li>
+<li class="portfolio__item swiper-slide">
 
-        <li class="portfolio__item swiper-slide">
+  <article class="article">
 
-          <article class="article">
+    <picture>
+      <source srcset="img/portfolio/disputs.avif" type="image/avif">
+      <source srcset="img/portfolio/disputs.webp" type="image/webp">
+      <img loading="lazy" src="img/portfolio/disputs" class="article__img" width="455" height="600" alt="portfolio/disputsDesc">
+    </picture>
 
-            <picture>
-              <source srcset="img/portfolio/people.avif" type="image/avif">
-              <source srcset="img/portfolio/people.webp" type="image/webp">
-              <img loading="lazy" src="img/portfolio/people.jpg" class="article__img" width="455" height="600"
-                alt="зображення групи людей">
-            </picture>
+    <div class="article__descr">
 
-            <div class="article__descr">
+      <span>Кредитні спори</span>
 
-              <a href="#"></a>
+      <h3>
+        Запобігли реалізації майна юридичної особи з торгів
+      </h3>
 
-              <span>Кредитные споры</span>
+      <p>
+        10 грудня 2021
+      </p>
+    </div>
 
-              <h3>Предотвратили реализацию имущества юридического лица с торгов</h3>
+  </article>
+</li>
+<li class="portfolio__item swiper-slide">
 
-              <p>10 декабря 2021</p>
+  <article class="article">
 
-            </div>
+    <picture>
+      <source srcset="img/portfolio/interier.avif" type="image/avif">
+      <source srcset="img/portfolio/interier.webp" type="image/webp">
+      <img loading="lazy" src="img/portfolio/interier" class="article__img" width="455" height="600" alt="portfolio/interierDesc">
+    </picture>
 
-          </article>
+    <div class="article__descr">
 
-        </li>
+      <span>Кредитні спори</span>
 
-        <li class="portfolio__item swiper-slide">
+      <h3>
+        Запобігли реалізації майна юридичної особи з торгів
+      </h3>
 
-          <article class="article">
+      <p>
+        10 грудня 2021
+      </p>
+    </div>
 
-            <picture>
-              <source srcset="img/portfolio/interier.avif" type="image/avif">
-              <source srcset="img/portfolio/interier.webp" type="image/webp">
-              <img loading="lazy" src="img/portfolio/interier.jpg" class="article__img" width="455" height="600"
-                alt="зображення інтерєру будівлі">
-            </picture>
+  </article>
+</li>
+<li class="portfolio__item swiper-slide">
 
-            <div class="article__descr">
+  <article class="article">
 
-              <a href="#"></a>
+    <picture>
+      <source srcset="img/portfolio/interier.avif" type="image/avif">
+      <source srcset="img/portfolio/interier.webp" type="image/webp">
+      <img loading="lazy" src="img/portfolio/interier" class="article__img" width="455" height="600" alt="portfolio/interierDesc">
+    </picture>
 
-              <span>Кредитные споры</span>
+    <div class="article__descr">
 
-              <h3>Предотвратили реализацию имущества юридического лица с торгов</h3>
+      <span>Кредитні спори</span>
 
-              <p>10 декабря 2021</p>
+      <h3>
+        Запобігли реалізації майна юридичної особи з торгів
+      </h3>
 
-            </div>
+      <p>
+        10 грудня 2021
+      </p>
+    </div>
 
-          </article>
+  </article>
+</li>
+<li class="portfolio__item swiper-slide">
 
-        </li>
+  <article class="article">
 
-         <li class="portfolio__item swiper-slide">
+    <picture>
+      <source srcset="img/portfolio/interier.avif" type="image/avif">
+      <source srcset="img/portfolio/interier.webp" type="image/webp">
+      <img loading="lazy" src="img/portfolio/interier" class="article__img" width="455" height="600" alt="portfolio/interierDesc">
+    </picture>
 
-           <article class="article">
+    <div class="article__descr">
 
-             <picture>
-               <source srcset="img/portfolio/interier.avif" type="image/avif">
-               <source srcset="img/portfolio/interier.webp" type="image/webp">
-               <img loading="lazy" src="img/portfolio/interier.jpg" class="article__img" width="455" height="600"
-                 alt="зображення інтерєру будівлі">
-             </picture>
+      <span>Кредитні спори</span>
 
-             <div class="article__descr">
+      <h3>
+        Запобігли реалізації майна юридичної особи з торгів
+      </h3>
 
-               <a href="#"></a>
+      <p>
+        10 грудня 2021
+      </p>
+    </div>
 
-               <span>Кредитные споры</span>
-
-               <h3>Предотвратили реализацию имущества юридического лица с торгов</h3>
-
-               <p>10 декабря 2021</p>
-
-             </div>
-
-           </article>
-
-         </li>
+  </article>
+</li>
 
       </ul>
 
@@ -702,23 +776,21 @@
 </section>
 
 
-
-
           <section class="reviews" id="reviews">
 
   <div class="container">
 
-    <span class="slogan" data-aos="fade-left" data-aos-delay="250">Відгуки</span>
+    <span class="slogan" data-aos="fade-up" data-aos-delay="250">Відгуки</span>
 
-    <h2 class="title" data-aos="fade-left">Відгуки клієнтів</h2>
+    <h2 class="title" data-aos="fade-up" data-aos-delay="300">Відгуки клієнтів</h2>
 
-    <div class="reviews__slider" data-aos="fade-up">
+    <div class="reviews__slider" data-aos="fade-up" data-aos-delay="350">
 
       <div class="slider-btns">
 
   <button class="slider-btn__next slider-btn btn-reset" type="button">
 
-    <svg class="icon">
+    <svg class="slider-icon">
       <use xlink:href="img/sprite.svg#arrow-right"></use>
     </svg>
 
@@ -730,7 +802,7 @@
 
   <button class="slider-btn__prev slider-btn btn-reset" type="button">
 
-    <svg class="icon icon--revers">
+    <svg class="slider-icon slider-icon--revers">
       <use xlink:href="img/sprite.svg#arrow-right"></use>
     </svg>
 
@@ -741,6 +813,7 @@
   </button>
 
 </div>
+
 
 
       <ul class="reviews__list swiper-wrapper">
@@ -974,108 +1047,94 @@
 
   <div class="faq__inner">
 
-    <div class="faq__box" data-aos="zoom-in-right" data-aos-easing="linear" data-aos-delay="550">
+    <div class="faq__box" data-aos="fade-up" data-aos-duration="500">
 
       <picture>
         <source srcset="img/glasses.avif" type="image/avif">
         <source srcset="img/glasses.webp" type="image/webp">
-        <img loading="lazy" class="faq__img" src="img/glasses.jpg" width="820" height="875" alt="Зображення окулярів, що лежать на документах">
+        <img loading="lazy" class="faq__img" src="img/glasses.jpg" width="820" height="875"
+          alt="Зображення окулярів, що лежать на документах">
       </picture>
 
     </div>
 
     <div class="faq__content">
 
-      <span class="slogan" data-aos="fade-left" data-aos-delay="150">FAQ</span>
+      <span class="slogan" data-aos="fade-up" data-aos-delay="250">FAQ</span>
 
-      <h2 class="title" data-aos="fade-left">Часті питання</h2>
+      <h2 class="title" data-aos="fade-up" data-aos-delay="300">Часті питання</h2>
 
-      <ul class="faq__list">
+      <ul class="faq__list" data-aos="fade-up" data-aos-delay="350">
 
-         <li class="faq__item" data-aos="flip-up" data-aos-delay="150">
+        <li class="faq__item">
 
-           <h3 class="faq__title">Як швидко ми зможемо передзвонити?</h3>
+          <h3 class="faq__title">Як швидко ми зможемо передзвонити?</h3>
 
-           <button class="faq__btn btn-reset" type="button">
+          <button class="faq__btn" aria-expanded="false">
+          </button>
 
-             <span class="visually-hidden">Кнопка показати/приховати текст</span>
+          <div class="faq__text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, harum! Lorem ipsum
+              dolor, sit amet consectetur adipisicing elit. Fuga, harum!</p>
+          </div>
 
-           </button>
+        </li>
 
-           <p class="faq__text">
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-             dolore magna aliqua.
-           </p>
+        <li class="faq__item">
 
-         </li>
+          <h3 class="faq__title">Як швидко ми зможемо передзвонити?</h3>
 
-          <li class="faq__item" data-aos="flip-up" data-aos-delay="250">
+          <button class="faq__btn" aria-expanded="false">
+          </button>
 
-            <h3 class="faq__title">Як швидко ми зможемо передзвонити?</h3>
+          <div class="faq__text" aria-hidden="true">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, harum! Lorem ipsum
+              dolor, sit amet consectetur adipisicing elit. Fuga, harum!</p>
+          </div>
 
-            <button class="faq__btn btn-reset" type="button">
+        </li>
 
-              <span class="visually-hidden">кнопка показати/приховати текст</span>
+        <li class="faq__item">
 
-            </button>
+          <h3 class="faq__title">Як швидко ми зможемо передзвонити?</h3>
 
-            <p class="faq__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.
-            </p>
+          <button class="faq__btn" aria-expanded="false">
+          </button>
 
-          </li>
+          <div class="faq__text" aria-hidden="true">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, harum! Lorem ipsum
+              dolor, sit amet consectetur adipisicing elit. Fuga, harum!</p>
+          </div>
 
-           <li class="faq__item" data-aos="flip-up" data-aos-delay="350">
+        </li>
 
-             <h3 class="faq__title">Як швидко ми зможемо передзвонити?</h3>
+        <li class="faq__item">
 
-             <button class="faq__btn btn-reset" type="button">
+          <h3 class="faq__title">Як швидко ми зможемо передзвонити?</h3>
 
-               <span class="visually-hidden">Кнопка показати/приховати текст</span>
+          <button class="faq__btn" aria-expanded="false">
+          </button>
 
-             </button>
+          <div class="faq__text" aria-hidden="true">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, harum! Lorem ipsum
+              dolor, sit amet consectetur adipisicing elit. Fuga, harum!</p>
+          </div>
 
-             <p class="faq__text">
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-               dolore magna aliqua.
-             </p>
+        </li>
 
-           </li>
+        <li class="faq__item">
 
-            <li class="faq__item" data-aos="flip-up" data-aos-delay="450">
+          <h3 class="faq__title">Як швидко ми зможемо передзвонити?</h3>
 
-              <h3 class="faq__title">Як швидко ми зможемо передзвонити?</h3>
+          <button class="faq__btn" aria-expanded="false">
+          </button>
 
-              <button class="faq__btn btn-reset" type="button">
+          <div class="faq__text" aria-hidden="true">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, harum! Lorem ipsum
+              dolor, sit amet consectetur adipisicing elit. Fuga, harum!</p>
+          </div>
 
-                <span class="visually-hidden">Кнопка показати/приховати текст</span>
-
-              </button>
-
-              <p class="faq__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-              </p>
-
-            </li>
-
-             <li class="faq__item" data-aos="flip-up" data-aos-delay="550">
-
-               <h3 class="faq__title">Як швидко ми зможемо передзвонити?</h3>
-
-               <button class="faq__btn btn-reset" type="button">
-
-                 <span class="visually-hidden">Кнопка показати/приховати текст</span>
-
-               </button>
-
-               <p class="faq__text">
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                 dolore magna aliqua.
-               </p>
-
-             </li>
+        </li>
 
       </ul>
 
@@ -1090,15 +1149,15 @@
 
   <div class="container">
 
-    <span class="slogan" data-aos="fade-right" data-aos-delay="250">Контакти</span>
+    <span class="slogan" data-aos="fade-up" data-aos-delay="250">Контакти</span>
 
-    <h2 class="title" data-aos="fade-right">Контактна інформація</h2>
+    <h2 class="title" data-aos="fade-up" data-aos-delay="300">Контактна інформація</h2>
 
   </div>
 
   <div class="contacts__inner">
 
-    <div class="contacts__box" data-aos="zoom-in-left" data-aos-easing="linear" data-aos-delay="550">
+    <div class="contacts__box" data-aos="fade-up" data-aos-delay="250">
 
       <picture>
         <source srcset="img/house.avif" type="image/avif">
@@ -1174,7 +1233,7 @@
 
       <div class="footer__contacts" data-aos="fade-up">
 
-        <p>Напишіть в зручний для Вас спосіб</p>
+        <p class="footer__title">Напишіть в зручний для Вас спосіб</p>
 
           <ul class="connection__list">
 
@@ -1255,7 +1314,7 @@
 
       <div class="footer__social" data-aos="fade-up">
 
-        <p>Мої соціальні мережі</p>
+        <p class="footer__title">Мої соціальні мережі</p>
 
         <ul class="social__list">
 
@@ -1312,7 +1371,7 @@
 
 </footer>
 
- <div class="graph-modal">
+<div class="graph-modal">
 
   <div class="graph-modal__container modal-form" role="dialog" aria-modal="true" data-graph-target="first">
 
@@ -1327,13 +1386,8 @@
   <label class="form__label">
     Послуга
 
-    <select class="form__area form__area--choose form-select" name="Послуга">
-
-      <span class="visually-hidden">
-        Вибір послуг
-      </span>
-
-      <option value="">Ввведіть послугу</option>
+    <select class="form__area form__area--choose" name="Послуга">
+      
       <option value="Реєстрація ФОП, ТОВ">Реєстрація ФОП, ТОВ</option>
       <option value="Спірне батьківство">Спірне батьківство</option>
       <option value="Кримінальне судочинство">Кримінальне судочинство</option>
@@ -1349,10 +1403,6 @@
 
     Ім’я
 
-    <span class="visually-hidden">
-      Ім’я
-    </span>
-
     <input class="form__area input-name" data-validate-field="name" type="text" placeholder="Олена Гончар">
 
   </label>
@@ -1361,19 +1411,11 @@
 
     Телефон
 
-    <span class="visually-hidden">
-      Телефон
-    </span>
-
     <input class="form__area input-tel" type="tel" data-validate-field="tel" placeholder="(+380) 12 345 67 89">
   </label>
 
   <label class="form__label">
     Електронна пошта
-
-    <span class="visually-hidden">
-      Електронна пошта
-    </span>
 
     <input class="form__area input-mail" name="email" data-validate-field="email" type="email"
       placeholder="olena@example.ua">
@@ -1382,10 +1424,6 @@
 
   <label class="form__label">
     Повідомлення
-
-    <span class="visually-hidden">
-      Повідомлення
-    </span>
 
     <textarea class="form__area form__area--text" id="message" placeholder="Добрий день!"></textarea>
   </label>
@@ -1422,9 +1460,6 @@
 </div>
 
 </div>
-
-
-
 
 
       </div>
